@@ -83,3 +83,11 @@ model/bin/wwatch3.env
 */*.swp
 */*/*.swp
 */*/*/*.swp
+
+model/inp/t*
+model/work/*
+model/exe/*
+model/mod/*
+model/obj/*
+model/bin/switch_t*
+model/out/*

@@ -492,13 +492,13 @@ then
     Tstart=`date +"%s.%2N"`
   fi
 
+  #Here's the command for compilation !
   if $path_b/w3_make $prog
   then :
   else
     errmsg "Error occured during WW3 $prog build"
     exit 1
   fi
-
   if [ $time_count ]
   then # Add time counter if -T
     Tend=`date +"%s.%2N"`
@@ -541,7 +541,6 @@ then
       errmsg "$ifile not found"
       exit 1
     fi
-
     # link conf file
     if [ $nml_input ] && [ ! -z "`echo ${ifile} | grep -o nml`" ]
     then
@@ -562,6 +561,7 @@ then
       Tstart=`date +"%s.%2N"`
     fi
 
+    #Here's the command to launch the program
     if $path_e/$prog > $ofile
     then
       \rm -f $prog.inp
