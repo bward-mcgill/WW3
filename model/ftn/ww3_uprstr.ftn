@@ -584,6 +584,7 @@
 ! 6. Write updated restart file
       WRITE (NDSO,903)
       INTYPE = 3
+!      CALL W3IORS ( 'COLD', NDS(6), SIG(NK), INTYPE, 1 )   
       CALL W3IORS ( 'HOT', NDS(6), SIG(NK), INTYPE, 1 )   
 !
 !/ ------------------------------------------------------------------- /

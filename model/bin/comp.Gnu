@@ -1,4 +1,6 @@
 #!/bin/bash
+
+set -x
 # --------------------------------------------------------------------------- #
 # comp  : Compiler script for use in ad3 (customized for hardware and         #
 #         optimization). Note that this script will not be replaced if part   #
@@ -111,14 +113,17 @@
     case $WWATCH3_NETCDF in
       NC3) opt="$opt -I$NETCDF_INCDIR" ;;
       NC4) if [ "$mpi_mod" = 'no' ]; then comp="`$NETCDF_CONFIG --fc`"; fi
+           echo "patate"
            opt="$opt -I`$NETCDF_CONFIG --includedir`" ;;
     esac
   fi
 
   # ftn include dir
+  echo $path_i
   opt="$opt -I$path_i"
   opt="$opt $ESMF_F90COMPILEPATHS"
   opt="$opt $EXTRA_COMP_OPTIONS"
+  opt="$opt -I/usr/lib64/gfortran/modules"
 
 # 2.b.2 Compile
 

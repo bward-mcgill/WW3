@@ -84,10 +84,10 @@ model/bin/wwatch3.env
 */*/*.swp
 */*/*/*.swp
 
-model/inp/t*
-model/work/*
-model/exe/*
-model/mod/*
-model/obj/*
-model/bin/switch_t*
-model/out/*
+model/inp/case*
+model/work
+model/exe
+model/mod
+model/obj
+model/bin/switch_case*
+model/out

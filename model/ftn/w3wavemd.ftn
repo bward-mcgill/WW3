@@ -671,6 +671,10 @@
 !
 ! 1.e Ice concentration interval
 !
+WRITE (*, '(A)') "IceConc"
+Print *, TICE
+Print *, TIN
+
       IF ( FLICE ) THEN
           IF ( TICE(1) .GE. 0 ) THEN
               DTI0   = DSEC21 ( TICE , TIN )
@@ -691,6 +695,10 @@
 !
 ! 1.e Ice thickness interval
 !
+WRITE (*, '(A)') "Ice Thickness interval"
+Print *, TIC1
+Print *, TI1
+
       IF ( FLIC1 ) THEN
           IF ( TIC1(1) .GE. 0 ) THEN
               DTI10   = DSEC21 ( TIC1 , TI1 )
@@ -708,6 +716,11 @@
 !
 ! 1.e Ice floe interval
 !
+
+WRITE (*, '(A)') "Ice Thickness interval"
+Print *, TIC5
+Print *, TI5
+
 !/IS2      IF ( FLIC5 ) THEN
 !/IS2          IF ( TIC5(1) .GE. 0 ) THEN
 !/IS2              DTI50   = DSEC21 ( TIC5 , TI5 )
@@ -723,6 +736,8 @@
 !/IS2          DTI50   = 0.
 !/IS2        END IF
 !
+
+
 ! 2.  Determine next time from ending and output --------------------- /
 !     time and get corresponding time step.
 !
@@ -2402,7 +2417,8 @@
 !
                           CALL W3IOTR ( NDS(11), NDS(12), VA, IMOD )
                         ELSE IF ( J .EQ. 4 ) THEN
-                          CALL W3IORS ('HOT', NDS(6), XXX, ITEST, IMOD )
+!                          CALL W3IORS ('HOT', NDS(6), XXX, ITEST, IMOD )
+                          CALL W3IORS ('COLD', NDS(6), XXX, ITEST, IMOD )
                         ELSE IF ( J .EQ. 5 ) THEN
                           IF ( IAPROC .EQ. NAPBPT ) THEN
 !/MPI                              IF (NRQBP2.NE.0) CALL MPI_WAITALL  &
