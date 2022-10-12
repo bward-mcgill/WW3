@@ -3959,8 +3959,8 @@
 !/SMC                      IRET=NF90_INQ_DIMID (NCID, 'latitude', DIMID(3))
 !/SMC                    ENDIF
                   ELSE
-                    IRET=NF90_INQ_DIMID (NCID, 'longitude', DIMID(2))
-                    IRET=NF90_INQ_DIMID (NCID, 'latitude', DIMID(3))
+                    IRET=NF90_INQ_DIMID (NCID, 'lon', DIMID(2)) !test
+                    IRET=NF90_INQ_DIMID (NCID, 'lat', DIMID(3))
                   ENDIF ! SMCGRD
                   IRET=NF90_INQ_VARID (NCID, 'longitude', VARID(1))
                   IRET=NF90_INQ_VARID (NCID, 'latitude', VARID(2))
@@ -4114,7 +4114,7 @@
                     ' for ',CURDATE(1),':',CURDATE(2),':',CURDATE(3),'T',CURDATE(5),&
                     ':',CURDATE(6),':',CURDATE(7),' in file ',TRIM(FNAMENC)
 
-
+            !test
 
             ! Defines starting point and size of arrays to be written
             START(1)=1
@@ -4768,8 +4768,8 @@
 !/SMC               IRET = NF90_DEF_DIM(NCID, 'latitude', dimln(3), DIMID(3))
 !/SMC            ENDIF
           ELSE
-            IRET = NF90_DEF_DIM(NCID, 'longitude', DIMLN(2), DIMID(2))
-            IRET = NF90_DEF_DIM(NCID, 'latitude', DIMLN(3), DIMID(3))
+            IRET = NF90_DEF_DIM(NCID, 'lon', DIMLN(2), DIMID(2)) !test
+            IRET = NF90_DEF_DIM(NCID, 'lat', DIMLN(3), DIMID(3))
           ENDIF ! SMCGRD
         ELSE                     
           IRET = NF90_DEF_DIM(NCID, 'x', DIMLN(2), DIMID(2))
