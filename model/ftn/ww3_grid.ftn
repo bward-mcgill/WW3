@@ -2422,8 +2422,11 @@
 !
       IF ( FLAGTR.LT.0 .OR. FLAGTR.GT.6 ) FLAGTR = 0
       CICEN  = MIN ( 1. , MAX ( 0. , CICEN ) )
-      ICESLN  = MIN ( 1. , MAX ( 0. , ICESLN ) )
-      ICEWIND = MIN ( 1. , MAX ( 0. , ICEWIND ) )
+!Test bward
+!      ICESLN  = MIN ( 1. , MAX ( 0. , ICESLN ) )
+!      ICEWIND = MIN ( 1. , MAX ( 0. , ICEWIND ) )
+      ICESLN  = MAX ( 0. , ICESLN )
+      ICEWIND = MAX ( 0. , ICEWIND )
       ICESDS  = MIN ( 1. , MAX ( 0. , ICESDS ) )
       ICESNL  = MIN ( 1. , MAX ( 0. , ICESNL ) )
       FICEN  = CICEN

@@ -1890,6 +1890,7 @@
 !/O9              ELSE
 !/O9                HS (JSEA) = - 4. * SQRT ( -ET(JSEA) )
 !/O9              END IF
+!Test bward
             IF ( ET(JSEA) .GT. 1.E-7 ) THEN
                 QP(JSEA) = ( 2. / ET(JSEA)**2 ) * EET1(JSEA) * TPIINV**2
                 WLM(JSEA) = EWN(JSEA) / ET(JSEA) * TPI
@@ -1899,6 +1900,7 @@
                 IF ( THS(JSEA) .LT. 0.01*RADE*DTH ) THS(JSEA) = 0.
               ELSE
                 WLM(JSEA) = 0.
+!                WLM(JSEA) = EWN(JSEA) / ET(JSEA) * TPI
                 T0M1(JSEA) = TPI / SIG(NK)
                 THS(JSEA) = 0.
               END IF

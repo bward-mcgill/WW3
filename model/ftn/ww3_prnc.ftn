@@ -722,11 +722,11 @@
           IRET=NF90_INQUIRE_DIMENSION(NCID,DIMSVAR(J),name=DIMNAME(J), len=DIMLN(J))
           CALL CHECK_ERR(IRET)
         END DO
-        IRET=NF90_GET_ATT(NCID,VARIDF(I),"_FillValue", FILLVALUE)
-        IF ( IRET/=NF90_NOERR ) THEN 
-          WRITE(NDSE,1027) TRIM(FIELDSNAME(I))
-          CALL EXTCDE ( 27 )
-        END IF
+!        IRET=NF90_GET_ATT(NCID,VARIDF(I),"_FillValue", FILLVALUE)
+!        IF ( IRET/=NF90_NOERR ) THEN 
+!          WRITE(NDSE,1027) TRIM(FIELDSNAME(I))
+!          CALL EXTCDE ( 27 )
+!        END IF
       END DO
 
       ! instanciates generic variables dimensions

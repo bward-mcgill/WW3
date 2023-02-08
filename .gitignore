@@ -92,3 +92,4 @@ model/obj
 model/bin/switch_case*
 model/out
 model/wim/__pycache__/
+model/tmp*

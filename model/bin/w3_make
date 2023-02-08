@@ -270,19 +270,19 @@
     fi
   fi
 
-#  rm -rf $main_dir/obj
-#  rm -rf $main_dir/mod
+  rm -rf $main_dir/obj
+  rm -rf $main_dir/mod
   if [ -f ${switch_file_old}_$pres_type ] ; then
      cp ${switch_file_old}_$pres_type $switch_file_old
   fi
   if [ -f ${makefile}_$pres_type ] ; then
     cp ${makefile}_$pres_type $makefile
   fi
-#  cd $main_dir
-#  mkdir -p obj_$pres_type mod_$pres_type
-#  ln -sf obj_$pres_type obj
-#  ln -sf mod_$pres_type mod
-#  cd $here
+  cd $main_dir
+  mkdir -p obj_$pres_type mod_$pres_type
+  ln -sf obj_$pres_type obj
+  ln -sf mod_$pres_type mod
+  cd $here
 
 
 

@@ -533,8 +533,22 @@
 !
       DEPTH  = MAX ( DMIN , D_INP )
       IKS1 = 1
+!Test bward
       ICESCALELN = MAX(0.,MIN(1.,1.-ICE*ICESCALES(1))) 
-      ICESCALEIN = MAX(0.,MIN(1.,1.-ICE*ICESCALES(2))) 
+      ICESCALEIN = MAX(0.,MIN(1.,1.-ICE*ICESCALES(2)))
+!
+!      IF (ICE.EQ.0) THEN 
+!         ICESCALELN=0
+!      ELSE 
+!         ICESCALELN = MAX(0.,MIN(1.,1.-(ICE*ICESCALES(1))))
+!      END IF
+!
+!      IF (ICE.EQ.0) THEN 
+!         ICESCALEIN=0
+!      ELSE 
+!         ICESCALEIN = MAX(0.,MIN(1.,1.-(ICE*ICESCALES(2))))
+!      END IF
+
       ICESCALENL = MAX(0.,MIN(1.,1.-ICE*ICESCALES(3))) 
       ICESCALEDS = MAX(0.,MIN(1.,1.-ICE*ICESCALES(4))) 
 !/IG1! 
