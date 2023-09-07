@@ -1603,7 +1603,7 @@
               ! Information for spectral
               FLFRQ  = .TRUE.
               NFIELD = 1
-              VARNM(1)='ef'
+              VARNM(1)='efreq'
               VARNL(1)='wave_elevation_spectrum'
               VARNG(1)=VARNS(1)
               VARNC(1)=''
@@ -1617,7 +1617,7 @@
                 VARNS(1)='power_spectral_density_of_surface_elevation'
                 FSC     = 1.
                 END IF
-              ENAME  = '.ef'
+              ENAME  = '.efreq'
               VARNG(1)=VARNS(1)
               VARNG(1)=VARNS(1)
               I1F=E3DF(2,1)
